@@ -13,3 +13,4 @@ export function isFontSize(arg: string): boolean {
       return false;
   }
 }
+

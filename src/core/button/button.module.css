@@ -1,0 +1,161 @@
+.citra-button {
+  border-style: solid;
+  border-radius: 999px;
+  border-color: transparent;
+  border-width: 1px;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: var(--s-sm) var(--s-md);
+  transition: background-color 0.2s ease-out, border-color 0.2s ease-out, width 0.2s ease-out;
+  --primary: var(--citra-blue-50);
+  --primary-hover: var(--citra-blue-60);
+  --danger: var(--citra-red-orange-60);
+  --danger-hover: var(--citra-red-orange-70);
+  --warning: var(--citra-yellow-30);
+  --warning-hover: var(--citra-yellow-40);
+  --tertiary: var(--citra-gray-20);
+}
+
+.citra-button:hover {
+  animation-play-state: running;
+}
+
+.citra-button.small {
+  font-size: var(--sm);
+}
+
+.citra-button:disabled {
+  background-color: var(--citra-bg-600);
+  color: var(--citra-gray-60);
+  pointer-events: none;
+  border-color: transparent;
+}
+
+.citra-button.inline-link:disabled {
+  color: var(--citra-gray-40);
+  pointer-events: none;
+  background-color: transparent;
+}
+
+/* .citra-button Content */
+
+.citra-button div {
+  position: relative;
+  right: 0;
+  transition: right 0.2s ease-out;
+}
+
+.citra-button div.move-left {
+  right: calc(var(--s-md) / 2 + 2px);
+}
+
+.citra-button, .citra-button div {
+  display: inline-flex;
+  align-items: center;
+}
+
+.citra-button.block {
+  display: block;
+  width: 100%;
+}
+
+
+/* Icon dan Spinner */
+
+.icon.start, .spinner {
+  margin-right: var(--s-sm);
+}
+
+.icon {
+  position: relative;
+}
+
+.icon.end {
+  margin-left: var(--s-sm);
+}
+
+.icon-only .icon {
+  margin-right: 0;
+}
+
+.spinner {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.spinner.show {
+  opacity: 1;
+}
+
+/* .citra-buttons Variant */
+
+.primary {
+  background-color: var(--primary);
+  color: var(--citra-white);
+}
+
+.primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.secondary {
+  background-color: var(--citra-white);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.secondary:hover {
+  border-color: var(--primary-hover);
+  color: var(--primary-hover);
+}
+
+.warning {
+  background-color: var(--warning);
+}
+
+.warning:hover {
+  background-color: var(--warning-hover);
+}
+
+.danger {
+  background-color: var(--danger);
+  color: var(--citra-white);
+}
+
+.danger:hover {
+  background-color: var(--danger-hover);
+}
+
+.tertiary {
+  background-color: var(--citra-white);
+  color: var(--primary);
+  border-color: var(--tertiary);
+}
+
+.tertiary:hover {
+  border-color: var(--primary-hover);
+  color: var(--primary-hover);
+}
+
+.inline-link {
+  text-decoration: underline;
+  padding: 0;
+}
+
+.inline-link:hover {
+  color: var(--primary-hover);
+}
+
+.link,
+.icon-only,
+.inline-link {
+  background-color: white;
+  border-color: transparent;
+  color: var(--primary);
+}
+
+.link:hover,
+.icon-only:hover {
+  background-color: var(--citra-bg-500);
+  color: var(--primary-hover);
+}
