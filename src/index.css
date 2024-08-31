@@ -1,0 +1,10 @@
+@import './global/nomarlize.css';
+@import './global/pf-color.css';
+@import './global/spacer.css';
+@import './global/typography.css';
+
+html * {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}

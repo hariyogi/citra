@@ -1,0 +1,115 @@
+primary = var(--citra-blue-50)
+primary-hover = var(--citra-blue-60)
+danger = var(--citra-red-orange-60)
+danger-hover = var(--citra-red-orange-70)
+warning = var(--citra-yellow-30)
+warning-hover = var(--citra-yellow-40)
+tertiary = var(--citra-gray-20)
+
+button
+  border-style: solid
+  border-radius: 999px
+  border-color: transparent
+  border-width: 1px
+  cursor pointer
+  box-sizing: border-box
+  padding: var(--s-sm) var(--s-md)
+  transition: background-color 0.2s ease-out, border-color 0.2s ease-out, width 0.2s ease-out
+  display: inline-flex
+  align-items: center
+  &.block
+    display: block
+    width: 100%
+  &:hover
+    animation-play-state: running
+  &.small
+    font-size: var(--sm)
+  &:disabled
+    background-color: var(--citra-bg-600)
+    color: var(--citra-gray-60)
+    pointer-events: none
+    border-color: transparent
+  &.inline-link:disabled
+    color: var(--citra-gray-40)
+    pointer-events: none
+    background-color: transparent
+    div
+      display: inline-flex
+      align-items: center
+      position: relative
+      right: 0
+      transition: right 0.2s ease-out
+    &.move-left
+      right: var(--s-md) / 2
+
+.g-icon
+  position: relative
+  top: 1px
+  &.end
+    margin-left: var(--s-sm)
+  &.start
+  .citra-spinner
+    margin-right: var(--s-sm)
+
+.icon-only
+  .g-icon
+    margin-right: 0
+
+.citra-spinner
+  opacity: 0
+  transiton: opacity 0.2s ease-out
+  &.show
+    opacity: 1
+
+.primary
+  background-color: primary
+  color: var(--citra-white)
+  &:hover
+    background-color: primary-hover
+
+.secondary
+  background-color: var(--citra-white)
+  color: primary
+  border-color: primary
+  &:hover
+    border-color: primary-hover
+    color: primary-hover
+
+.warning
+  background-color: warning
+  &:hover
+    background-color: warning-hover
+
+.danger
+  background-color: danger
+  color: var(--citra-white)
+  &:hover
+    background-color: danger-hover
+
+.tertiary
+  background-color: var(--citra-white)
+  color: primary
+  border-color: tertiary
+  &:hover
+    border-collapse: primary-hover
+    color: primary-hover
+
+.inline-link
+  text-decoration: underline
+  padding: 0
+  background-color: (--citra-white)
+  border-color: transparent
+  color: primary
+  &:hover
+    color: primary-hover
+
+.link
+.icon-only
+  background-color: white;
+  border-color: transparent;
+  color: primary;
+  &:hover
+    background-color: var(--citra-bg-500)
+    color: primary-hover
+
+  
